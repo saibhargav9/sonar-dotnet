@@ -74,8 +74,9 @@ Variable name `sut` (System Under Test) is recommended in unit tests that really
     ```
   * Exception from this rule: chained LINQ queries where the alignment of parameter expressions should be right-most.
         ```
-        someEnumerable.Select(x => x.Foo).Where(x => x.Condition1
-                                                     && x.Condition2);
+        someEnumerable.Select(x => x.Foo)
+            .Where(x => x.Condition1
+                        && x.Condition2);
         ```
 * Expression body of arrow property should be on the same line, as the property declaration. It should be on next line only when S103 is violated.
 * Expression body of method should be on the same line only for trivial cases: literal or simple identifier. Member access, indexer, invocation and other complex structures should be on the next line.
