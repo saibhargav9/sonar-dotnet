@@ -36,12 +36,12 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: 0a77d188cac916f33e7aad30630943539e7b0ce8
-      working-directory: ./src
+      working-directory: ././src
       run: |
         .\.sonar\scanner\dotnet-sonarscanner begin /k:"sai" /o:"saibhargav" /d:sonar.login="0a77d188cac916f33e7aad30630943539e7b0ce8" /d:sonar.host.url="https://sonarcloud.io"
-        working-directory: ./src
+        working-directory: ././src
         dotnet build --configuration Release
         .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="0a77d188cac916f33e7aad30630943539e7b0ce8"
     - name: Run Tests
-      working-directory: ./src
+      working-directory: ././src
       run: dotnet test
