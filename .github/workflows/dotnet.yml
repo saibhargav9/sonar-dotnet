@@ -39,8 +39,7 @@ jobs:
       working-directory: ./analyzers/src
       run: |
         dotnet sonarscanner begin /k:"sai" /o:"saibhargav" /d:sonar.login="0a77d188cac916f33e7aad30630943539e7b0ce8"
-        working-directory: ./analyzers/src
-        dotnet build --configuration Release
+        dotnet build 
         dotnet sonarscanner end /d:sonar.login="0a77d188cac916f33e7aad30630943539e7b0ce8"
     - name: Run Tests
       working-directory: ./analyzers/src
