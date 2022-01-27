@@ -36,7 +36,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: 0a77d188cac916f33e7aad30630943539e7b0ce8
-      working-directory: ./analyzers/src
+      
       shell: pwsh
       run: |
         .\.sonar\scanner\dotnet-sonarscanner begin /k:"sai" /o:"saibhargav" /d:sonar.login="039c43988dcb9e1143816b374bfd0ce30831b061" /d:sonar.host.url="https://sonarcloud.io"
