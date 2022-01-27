@@ -28,7 +28,6 @@ jobs:
         key: ${{ runner.os }}-sonar-scanner
         restore-keys: ${{ runner.os }}-sonar-scanner
     - name: Install SonarCloud scanner
-
         
     - name: Build and analyze
       env:
